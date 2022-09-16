@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 attribute selectors</title>
+    <style>
+             /* <1> <a> elements with a title attribute START */
+                a[title] {
+            border: 2px solid rgb(255, 166, 0);
+        }
+
+        /* <a> elements with a title attribute END*/
+            a[href*="wel come"] {
+                font-size: xx-large;
+            }
+
+       /* <2> <a> elements with an href matching "https://example.org" START */
+        a[href="https://www.tops-int.com"] {
+            font-weight: bolder;
+        }
+
+        /* <a> elements with an href matching "https://example.org" END */
+
+        /* <3><a> elements with an href containing "example" START */
+        a[href*="example"] {
+            font-size: 2em;
+        }
+
+        /* <a> elements with an href containing "example" END*/
+
+        /* <4><a> elements with an href ending ".org" START */
+        a[href$=".in"] {
+            font-style: italic;
+            background: linear-gradient(orange, white, green);
+        }
+
+        /* <a> elements with an href ending ".org" END*/
+
+        /* <5><a> elements whose class attribute contains the word "logo" */
+        a[class~="logo"] {
+            padding: 2px;
+            font-size: 36px;
+            background-color: rgba(255, 174, 0, 0.425);
+        }
+        /* <a> elements whose class attribute contains the word "logo" */
+
+    </style>
+</head>
+<body>
+    <a href="wel come">click here</a>
+    <br>
+    <a href="">this is link</a>
+    <br>
+    <a href="https://www.tops-int.com/">TOPS</a>
+    <br>
+    <a accesskey="h" title="alt+h" href="http//www.google.com">google</a>
+    <br>
+    <a href="https//www.home.come">home</a>
+    <br>
+    <a title="h" href="example">about</a>
+    <br>
+    <a href="https://www.example.com">contact</a>
+    <br>
+    <h2><a href="https://www.aa.in">india</a></h2>
+    <br>
+    <a href="https://www.inexample.com">CONTACT BLUE</a>
+    <br>
+    <a class="logo" href="#">mysite</a>
+</body>
+</html>
